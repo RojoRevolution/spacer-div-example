@@ -50,9 +50,6 @@ table.table>tbody>tr>td {
         width: 1200px;
     }
 
-    #main-content {
-        position: relative;
-    }
 }
 
 @media screen and (max-width:990px) {
@@ -62,7 +59,4 @@ table.table>tbody>tr>td {
         box-shadow: 0 0 20px rgba(0, 0, 0, .5)
     }
 
-    /* #sidebar-spacer {
-        display: flex;
-    } */
 }
