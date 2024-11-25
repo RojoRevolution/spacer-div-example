@@ -1,0 +1,67 @@
+table.table>tbody>tr>td {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.action-btns {
+    display: none;
+}
+
+/* #main-content {
+    position: relative;
+} */
+
+#scans-table {
+    width: 100%;
+    padding: 20px 16px 0 16px;
+}
+
+#sidebar-spacer {
+    background: #ececec;
+    max-width: 400px;
+    width: 100%;
+    border-left: 1px solid #333;
+    height: 100vh;
+    display: none;
+}
+
+#actual-sidebar {
+    max-width: 400px;
+    background: white;
+    width: 100%;
+    border-left: 1px solid #333;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.sidebar-content {
+    padding: 20px;
+    position: sticky;
+}
+
+@media screen and (max-width:1200px) {
+    #scans-table {
+        overflow-x: scroll;
+    }
+
+    #scans-table table {
+        width: 1200px;
+    }
+
+    #main-content {
+        position: relative;
+    }
+}
+
+@media screen and (max-width:990px) {
+
+    #actual-sidebar {
+        position: fixed;
+    }
+
+    /* #sidebar-spacer {
+        display: flex;
+    } */
+}
