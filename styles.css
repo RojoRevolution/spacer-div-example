@@ -6,10 +6,6 @@ table.table>tbody>tr>td {
     display: none;
 }
 
-/* #main-content {
-    position: relative;
-} */
-
 .main-header {
     height: 90px;
     background-color: navy;
@@ -22,15 +18,17 @@ table.table>tbody>tr>td {
     z-index: 2;
 }
 
+.sidebar-button {
+    display: none;
+    padding: 16px;
+}
+
 
 #scans-table {
+    position: relative;
     width: 100%;
     padding: 20px 16px 0 16px;
 }
-
-/* #main-content {
-    position: relative;
-} */
 
 #sidebar-spacer {
     background: #ececec;
@@ -49,7 +47,6 @@ table.table>tbody>tr>td {
     height: 93vh;
     position: sticky;
     top: 90px;
-    /* bottom: 0; */
     right: 0;
     z-index: 2;
 }
@@ -60,10 +57,13 @@ table.table>tbody>tr>td {
 }
 
 @media screen and (max-width:1200px) {
+
+    /* Table can be overflowed before the sidebar can be hidden */
     #scans-table {
         overflow-x: scroll;
     }
 
+    /* Set table width so it can be overflowed */
     #scans-table table {
         width: 1200px;
     }
@@ -72,12 +72,18 @@ table.table>tbody>tr>td {
 
 @media screen and (max-width:990px) {
 
+    .sidebar-button {
+        display: block;
+    }
+
     #actual-sidebar {
         position: fixed;
         box-shadow: 0 0 20px rgba(0, 0, 0, .5);
         z-index: 3;
         top: 0;
         height: 100vh;
+        /* Add transition once the sidebar breaks out and can be hidden */
+        transition: .2s ease-out;
     }
 
 }
